@@ -1,7 +1,4 @@
-body{
-    background : gray;
-    font-family: 'montserrat';
-}
+
 
 #form{
     width: 300px;
@@ -9,6 +6,7 @@ body{
     padding: 20px;
     background-color: whitesmoke;
     font-size: 12px;
+    margin-top: -700px;
 }
 #form h1{
     color: #0f2027;
@@ -17,7 +15,7 @@ body{
 #form button{
     padding: 10px;
     margin-top: 10px;
-    width: 10px;
+    width: 100px;
     color: white;
     background-color: rgb(41, 57, 194);
     border : none;
