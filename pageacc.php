@@ -2,11 +2,11 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>    <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <title>first step</title>
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/validation.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>    
 <body>
@@ -19,7 +19,7 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="index4.html" class="nav-link text-white option active">
+        <a href="pageacc.php" class="nav-link text-white option active">
           population
         </a>
       </li>
@@ -29,7 +29,7 @@
         </a>
       </li>
       <li class="option">
-        <a href="ajouter.html" class="nav-link text-white">
+        <a href="ajouter.php" class="nav-link text-white">
           Ajouter
         </a>
       </li>
@@ -41,7 +41,7 @@
   <div class="container mt-5 pb-5 pt-5 col-9" >
     <div class="row">
         <form class="d-flex">
-            <input id="search" class="form-control me-2" type="text" placeholder="rechercher un nom" aria-label="Search" width="100">
+            <input id="search" class="form-control me-2" type="text" placeholder="rechercher un nom" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
     </div>

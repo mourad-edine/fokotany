@@ -1,10 +1,37 @@
+<?php
+if(isset($_POST["register"]))
+{
+    $nom = $_POST["nom"];
+    $numeroCIN = $_POST["numeroCIN"];
+    $adresse = $_POST["adresse"];
+    $sexe = $_POST["sexe"];
+
+    if($nom != "" && $numeroCIN != "" && $adresse != "" && $sexe != "" )
+    {
+
+        $sql = "INSERT INTO users(nom,numeroCIN,adresse,sexe) VALUES('$nom','$numeroCIN','$adresse','$sexe')";
+  
+        include_once('db2.php');
+
+        $qry = mysqli_query($conn,$sql) or die("erreur d'entré!");
+        if($qry)
+        {
+            echo "$nom ajouter avec succes";
+        }else{
+            echo "erreur";
+        }
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ajouter</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/validation.css">
 </head>
@@ -17,7 +44,7 @@
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
-            <a href="index.html" class="nav-link text-white option">
+            <a href="pageacc.php" class="nav-link text-white option">
               population
             </a>
           </li>
@@ -36,29 +63,34 @@
         
       </div> 
     <div class="container col-9">
-        <form id = "form" action="/">
+        <form id = "form" method="POST" name="register">
             <h1>Ajouter </h1>
             <div class="input-control">
-                <label for="username">prenom</label>
-                <input type="text" id="username" name="username">
+                <label for="nom">nom</label>
+                <input type="text" id="nom" name="nom">
+                <div class="error"></div>
+            </div>
+            
+            <div class="input-control">
+                <label for="numeroCIN">numero CIN</label>
+                <input type="text" id="numeroCIN" name="numeroCIN">
                 <div class="error"></div>
             </div>
             <div class="input-control">
-                <label for="email">email</label>
-                <input type="email" id="email" name="email">
+                <label for="adresse">adresse</label>
+                <input type="text" id="adresse" name="adresse">
                 <div class="error"></div>
             </div>
-            <div class="input-control">
-                <label for="password">numero CIN</label>
-                <input type="text" id="password" name="password">
-                <div class="error"></div>
+            <div class="form-group mt-3">
+                  <select name="sexe" class="form-control form-control-lg" id="sexe">
+                    <option value="">sexe</option>
+                    <option value="H">homme</option>
+                    <option value="F">femme</option>
+                  </select>
             </div>
-            <div class="input-control">
-                <label for="username">adresse</label>
-                <input type="text" id="password2" name="password2">
-                <div class="error"></div>
-            </div>
-            <button type="submit">Ajouter</button>        
+            <div class="mt-3">
+              <input type="submit" name="register" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="ajouter"/>
+            </div>       
         </form>
     </div>
     

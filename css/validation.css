@@ -4,12 +4,12 @@
     width: 300px;
     margin: 20vh auto 0 auto;
     padding: 20px;
-    background-color: whitesmoke;
+    background-color: gray;
     font-size: 12px;
     margin-top: -700px;
 }
 #form h1{
-    color: #0f2027;
+    color: white;
     text-align: center;
 }
 #form button{
