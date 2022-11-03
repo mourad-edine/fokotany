@@ -14,10 +14,7 @@ if(isset($_POST["register"]))
         include_once('db2.php');
 
         $qry = mysqli_query($conn,$sql) or die("erreur d'entré!");
-        if($qry)
-        {
-            echo "$nom ajouter avec succes";
-        }else{
+        if(!$qry){
             echo "erreur";
         }
     }
@@ -68,18 +65,18 @@ if(isset($_POST["register"]))
             <div class="input-control">
                 <label for="nom">nom</label>
                 <input type="text" id="nom" name="nom">
-                <div class="error"></div>
+                <div class="error" id="error"></div>
             </div>
             
             <div class="input-control">
                 <label for="numeroCIN">numero CIN</label>
                 <input type="text" id="numeroCIN" name="numeroCIN">
-                <div class="error"></div>
+                <div class="error" id="error"></div>
             </div>
             <div class="input-control">
                 <label for="adresse">adresse</label>
                 <input type="text" id="adresse" name="adresse">
-                <div class="error"></div>
+                <div class="error" id="error"></div>
             </div>
             <div class="form-group mt-3">
                   <select name="sexe" class="form-control form-control-lg" id="sexe">
@@ -88,13 +85,23 @@ if(isset($_POST["register"]))
                     <option value="F">femme</option>
                   </select>
             </div>
+            <div id="error"></div>
             <div class="mt-3">
-              <input type="submit" name="register" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="ajouter"/>
+              <input type="submit" name="register" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="ajouter" id = "envoyer" onclick="message()"/>
+            </div>
+            <div class="message">
+              <div class="success bg-success m-3 p-3 text-white" id="success">
+              </div>
+              <div class="success bg-danger m-3 p-3 text-white" id="error">
+              </div>
+
             </div>       
         </form>
+
     </div>
     
- </main>     
+ </main>  
+    <script src="script2.js"></script>   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

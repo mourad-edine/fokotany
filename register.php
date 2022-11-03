@@ -46,8 +46,8 @@ if(isset($_POST["register"]))
           <div class="col-lg-4 mx-auto">
             <div class="auth-form-light text-left py-5 px-4 px-sm-5 bg-white mt-5">
              
-              <h4>New here?</h4>
-              <h6 class="font-weight-light">Signing up is easy. It only takes a few steps</h6>
+              <h4>ajouter un administrateur!</h4>
+
               <form class="pt-3" method="POST" name="register">
                 <div class="form-group mt-3">
                   <input type="text" name="username" class="form-control form-control-lg" id="username" placeholder="Username">
@@ -70,10 +70,9 @@ if(isset($_POST["register"]))
                 </div>
                 <div class="mt-3">
                   <input type="submit" name="register" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="inscription"/>
-                
                 </div>
                 <div class="text-center mt-4 font-weight-light">
-                  vous avez déjà un compte? <a href="login.php" class="text-primary">connectio</a>
+                  vous avez déjà un compte? <a href="index.php" class="text-primary">connection</a>
                 </div>
               </form>
             </div>

@@ -4,12 +4,12 @@
     width: 300px;
     margin: 20vh auto 0 auto;
     padding: 20px;
-    background-color: gray;
+    background-color: whitesmoke;
     font-size: 12px;
     margin-top: -700px;
 }
 #form h1{
-    color: white;
+    color:  #0f2027;
     text-align: center;
 }
 #form button{
@@ -47,6 +47,6 @@
 
 .input-control .error{
     color: #ff3860;
-    font-size: 9px;
+    font-size: 12px;
     height: 13px;
 }
