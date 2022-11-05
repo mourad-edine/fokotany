@@ -21,16 +21,14 @@
 
     <div class="container site">
         <nav class="sidebar text-white">
-            <div>
-                <img src="/person-circle (1).svg" alt="" width="20" height="20">
+            
+                <img src="img/person-circle (1).svg" alt="" width="20" height="20">
                 <a href="index4.php" <?php if($nav === 'popu') :?>style ='background: #0f2027; color: white;'<?php endif; ?>>population</a>
-            </div>
-            <div>
-                <img src="/card-checklist.svg" alt="" width="20" height="20">
-                <a href="info.php" <?php if($nav === 'info') :?> style ='background: #0f2027; color: white;'<?php endif; ?>>information</a>
-            </div>
-            <div>
-                <img src="/plus-circle.svg" alt="" width="20" height="20">
+    
+                <img src="img/card-checklist.svg" alt="" width="20" height="20">
+                <a href="info.php" <?php if($nav === 'info') :?> style ='background: #0f2027; color: white;'<?php endif; ?>>liste</a>
+            
+                <img src="img/plus-circle.svg" alt="" width="20" height="20">
                 <a href="index5.php" <?php if($nav === 'ajout') :?> style ='background: #0f2027; color: white;'<?php endif; ?>>ajouter</a>
-            </div>
+            
         </nav>

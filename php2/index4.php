@@ -13,7 +13,7 @@ require_once("header.php");
         </form>
     </div>
     <div class="row">
-        <div class="offset-md-1 col-md-10">
+        <div class="offset-md-1 col-md-10 mt-5">
             <table class="table table-bordered border-primary table-hover mt-5 text-capitalize" id="mytable">
               <?php
               if(isset($_POST["submit"])){

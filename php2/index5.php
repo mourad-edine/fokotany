@@ -33,7 +33,7 @@ require_once("header.php");
                   <div class="">
                     <div class="row w-100 mx-0">
                       <div class="col-lg-7 mx-auto">
-                        <div class="auth-form-light text-left py-5 px-4 px-sm-5 kaj rounded mt-5 ">
+                        <div class="auth-form-light text-left py-5 px-4 px-sm-5 kaj rounded ">
                           <form class="pt-1" method="POST" name="register">
                             <div class="form-group mt-3">
                                 <input type="text" name="nom" class="form-control form-control-lg" id="nom" placeholder="nom">
