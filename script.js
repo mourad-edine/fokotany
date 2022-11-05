@@ -39,7 +39,7 @@ var array =[
 
 function showtable(curarray){
     document.getElementById("mytable").innerHTML = `
-        <tr class = "bg-primary text-white fw-bold">
+        <tr class = "bg-dark text-white fw-bold">
             <td>ID</td>
             <td>nom</td>
             <td>numeroCIN</td>
