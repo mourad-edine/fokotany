@@ -3,7 +3,7 @@
 $uname = "root";
 $dbpass = "";
 $host = "localhost";
-$db = "chamsy";
+$db = "info";
 
 $conn = mysqli_connect("$host","$uname", "$dbpass","$db") or die("misy raha tsy manjary ao kkkkkkkkkkk");
 

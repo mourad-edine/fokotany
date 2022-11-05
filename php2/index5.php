@@ -42,13 +42,18 @@ require_once("header.php");
                                  <input type="numeroCIN" name="numeroCIN" class="form-control form-control-lg" id="numeroCIN" placeholder="numeroCIN">
                             </div>
                             <div class="form-group mt-3">
-                                <input type="adresse" name="adresse" class="form-control form-control-lg" id="adresse" placeholder="adresse">
+                                 <select name="adresse" class="form-control form-control-lg" id="adresse">
+                                     <option value="">Adresse</option>
+                                     <option value="barikadimy">barikadimy</option>
+                                    <option value="mangarano ||">mangarano ||</option>
+                                    <option value="Sampanana Basiandrano">basiandrano</option>
+                                </select>
                             </div>
                             <div class="form-group mt-3">
                                  <select name="sexe" class="form-control form-control-lg" id="sexe">
                                      <option value="">sexe</option>
-                                     <option value="H">homme</option>
-                                    <option value="F">femme</option>
+                                     <option value="Homme">homme</option>
+                                    <option value="Femme">femme</option>
                                 </select>
                             </div>
                             
