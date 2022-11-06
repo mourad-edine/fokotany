@@ -18,7 +18,7 @@ require_once("header.php");
               <?php
               if(isset($_POST["submit"])){
                 $search = $_POST["search"];
-                $sql = "SELECT * FROM users WHERE id like'%$search%' or nom like'%$search%' or adresse like'%$search%' or numeroCIN like '%$search%' ";
+                $sql = "SELECT * FROM userse WHERE id like'%$search%' or nom like'%$search%' or adresse like'%$search%' or numeroCIN like '%$search%' ";
                 require_once("db4.php");
                 $result = mysqli_query($conn,$sql);
 

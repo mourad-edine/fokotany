@@ -1,12 +1,20 @@
 <?php
 
 
-
+require_once("db4.php");
 require_once "dompdf/autoload.inc.php";
 
-use Dompdf\Dompdf;
-
-$page = '
+if(isset($_GET['data'])){
+    $data =$_GET['data'];
+  }else{
+    $data = "";
+  }
+   
+  $sql = "SELECT * FROM userse WHERE id=$data";
+  $result = mysqli_query($conn,$sql);
+  if($result){
+    $row = mysqli_fetch_assoc($result);
+    $page = '
 <body>
     <style>
         body{
@@ -51,25 +59,35 @@ img{
 
     </div>
     <div class="div2">
-        <p>Je sousigné(e) :..........php...........</p>
-        <p>Chef du quartier:.........php............</p>
-        <p>Atteste que le nommé(e):..php............</p>
-        <p>Née le:..php............ à .............</p>
-        <p>De:.......................php............</p>
-        <p>Et de:....................php.............</p>
-        <p>Originaire de:............php............de nationalité........</p>
-        <p>Exerce le proffession de:..php............</p>
-        <p>Titulaire de :.......php............</p>
-        <p>Réside effecivement dans quartier et est domicilé au lot N°:..php............</p>
-        <p>Depuis:..php............</p>
+        <p>Je sousigné(e) : RAKOTO Marco Polo</p>
+        <p>Chef du quartier: Mangarano 2</p>
+        <p>Atteste que le nommé(e):'.$row['nom'].' ' .$row['prenom'].'</p>
+        <p>Née le: 1 Avril 2000</p>
+        <p>De:...........................</p>
+        <p>Et de:...............</p>
+        <p>Originaire de:   '.$row['origine'].' .de nationalité '.$row['national'].'</p>
+        <p>Exerce le proffession de: ' .$row['profession'].'</p>
+        <p>Titulaire de :...........</p>
+        <p>Réside effecivement dans quartier et est domicilé au lot N°:'.$row['adresse'].'</p>
+        <p>Depuis:..............</p>
         <p>En foi de quoi la présence Attestation de Résidence lui est délivré pour servir et valoir ce que de droit</p><br><br>
-                                   <p> Toamasina, le .......php.....</p>
+                                   <p> Toamasina, le 10/08/2022</p>
 
                                    <p class="chef">le chef de quartier</p><br><br><br><br>
 
     </div>
 </body>
 </html>';
+}else{
+    $page = '<p class="lead">
+              <a class="btn btn-dark" href="index4.php">retour</a>
+          </p>
+    <h2 class ="text-primary mt-5 mb-3">la personne a été supprimé!</h2>';
+  }
+
+use Dompdf\Dompdf;
+
+
 $dompdf = new Dompdf();
 
 $dompdf -> loadHtml($page);

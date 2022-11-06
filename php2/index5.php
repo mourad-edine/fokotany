@@ -3,15 +3,24 @@ $titre = "ajouter";
 $nav = "ajout";
 if(isset($_POST["register"]))
 {
-    $nom = $_POST["nom"];
-    $numeroCIN = $_POST["numeroCIN"];
-    $adresse = $_POST["adresse"];
-    $sexe = $_POST["sexe"];
+  $nom = $_POST["nom"];
+  $national = $_POST["national"];
+  $email = $_POST["email"];
+  $adresse = $_POST["adresse"];
+  $sexe = $_POST["sexe"];
+  $numeroTEL= $_POST["numeroTEL"];
+  $prenom = $_POST["prenom"];
+  $numeroCIN = $_POST["numeroCIN"];
+  $profession = $_POST["profession"];
+  $origine = $_POST["origine"];
 
-    if($nom != "" && $numeroCIN != "" && $adresse != "" && $sexe != "" )
+    
+
+  if($nom != "" && $national != "" && $email != "" && $adresse != "" && $sexe != "" && $prenom != "" && $numeroCIN != "" && $numeroTEL != "" && $profession != "" && $origine !="" )
     {
 
-        $sql = "INSERT INTO users(nom,numeroCIN,adresse,sexe) VALUES('$nom','$numeroCIN','$adresse','$sexe')";
+      $sql = "INSERT INTO userse(nom,prenom,profession,adresse,numeroCIN,email,numeroTEL,national,sexe,origine) VALUES('$nom','$prenom','$profession','$adresse','$numeroCIN','$email','$numeroTEL','$national','$sexe','$origine')";
+
   
         include_once('db4.php');
 
@@ -33,32 +42,77 @@ require_once("header.php");
                   <div class="">
                     <div class="row w-100 mx-0">
                       <div class="col-lg-7 mx-auto">
-                        <div class="auth-form-light text-left py-5 px-4 px-sm-5 kaj rounded ">
+                        <div class="auth-form-light text-left py-5 px-4 px-sm-5  rounded ">
                           <form class="pt-1" method="POST" name="register">
                             <div class="form-group mt-3">
-                                <input type="text" name="nom" class="form-control form-control-lg" id="nom" placeholder="nom">
+                              <input type="text" name="nom" class="form-control form-control-lg" id="username" placeholder="nom">
                             </div>
                             <div class="form-group mt-3">
-                                 <input type="numeroCIN" name="numeroCIN" class="form-control form-control-lg" id="numeroCIN" placeholder="numeroCIN">
+                              <input type="text" name="prenom" class="form-control form-control-lg" id="prenom" placeholder="prenom">
                             </div>
                             <div class="form-group mt-3">
-                                 <select name="adresse" class="form-control form-control-lg" id="adresse">
-                                     <option value="">Adresse</option>
-                                     <option value="barikadimy">barikadimy</option>
-                                    <option value="mangarano ||">mangarano ||</option>
-                                    <option value="Sampanana Basiandrano">basiandrano</option>
+                                <select name="profession" class="form-control form-control-lg" id="profession">
+                                   <option value="">profession</option>
+                                   <option value="ingenieur">ingénieur</option>
+                                   <option value="chauffeur">chauffeur</option>
+                                   <option value="mécanicien">mecanicien</option>
+                                   <option value="boucher">boucher</option>
+                                   <option value="informaticien">informaticien</option>
+                                   <option value="agriculteur">agriculteur</option>
+                                   <option value="vendeur">vendeur</option>
+                                   <option value="Autre">Autre</option>
                                 </select>
                             </div>
                             <div class="form-group mt-3">
-                                 <select name="sexe" class="form-control form-control-lg" id="sexe">
-                                     <option value="">sexe</option>
-                                     <option value="Homme">homme</option>
-                                    <option value="Femme">femme</option>
-                                </select>
-                            </div>
+                                <select name="adresse" class="form-control form-control-lg" id="adresse">
+                                   <option value="">adresse</option>
+                                   <option value="mangarano ||">mangarano ||</option>
+                                   <option value="Barikadimy">Barikadimy</option>
+                                   <option value="mangarivotra">mangarivotra</option>
+                                   <option value="Basiandrano">Basiandrano</option>
+                                   <option value="AR">Argentina</option>
+                              </select>
+                             </div>
                             
-                            <div class="mt-3">
-                                 <input type="submit" name="register" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="ajouter"/>
+                             <div class="form-group mt-3">
+                                <input type="email" name="email" class="form-control form-control-lg" id="email" placeholder="Email" required>
+                              </div>
+                              <div class="form-group mt-3">
+                                <input type="text" name="numeroCIN" class="form-control form-control-lg" id="numeroCIN" placeholder="numeroCIN">
+                             </div>
+                             <div class="form-group mt-3">
+                                <select name="sexe" class="form-control form-control-lg" id="sexe">
+                                   <option value="">sexe</option>
+                                   <option value="homme">homme</option>
+                                    <option value="femme">femme</option>
+                                </select>
+                             </div>
+                             <div class="form-group mt-3">
+                                <input type="text" name="numeroTEL" class="form-control form-control-lg" id="numeroTEL" placeholder="numero de téléphone" >
+                              </div>
+                              <div class="form-group mt-3">
+                                <select name="national" class="form-control form-control-lg" id="national">
+                                   <option value="">nationalité</option>
+                                   <option value="Malagasy">Malagasy</option>
+                                    <option value="Français">Français</option>
+                                    <option value="italien">italian</option>
+                                    <option value="bresilien">bresilien</option>
+                                </select>
+                             </div>
+                             <div class="form-group mt-3">
+                                <select name="origine" class="form-control form-control-lg" id="origine">
+                                   <option value="">origine</option>
+                                   <option value="tulear">tulear</option>
+                                    <option value="toamasina">toamasina</option>
+                                    <option value="mahajanga">mahajanga</option>
+                                    <option value="tanà">tanà</option>
+                                    <option value="antsiranana">antsiranana</option>
+                                    <option value="fianarantsoa">fianarantsoa</option>
+
+                                </select>
+                             </div>
+                             <div class="mt-3">
+                                 <input type="submit" name="register" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="inscription"/>
                              </div>
                          </form>
                         </div>

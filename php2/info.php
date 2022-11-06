@@ -13,7 +13,7 @@ require_once("header.php");
                       <div class="col-lg-12 mx-auto">
                         <div class="auth-form-light text-left py-5 px-4 px-sm-5">
                            <?php require_once("db4.php");
-                           $query = "SELECT * FROM users";
+                           $query = "SELECT * FROM userse";
                            $query_run = mysqli_query($conn,$query);
                            ?>
                             <table class="table table-bordered" width ="700">
@@ -37,9 +37,9 @@ require_once("header.php");
                                                 <td><?php echo $row['sexe'] ;?></td>
                                                 <td><?php echo $row['adresse'] ;?></td>
                               
-                                            <form action="delete.php" method="POST">
+                                            <form action="" method="POST">
                                                 <input type="hidden" name = "id" value="<?php echo $row['id'] ?>">
-                                                <td><input type="submit" href="delete.php" class="btn btn-success" name ="delete" value="modifier"></td>
+                                                <td><input type="submit" href="" class="btn btn-success" name ="delete" value="modifier"></td>
                                             </form>
                                             
                                             <form action="delete.php" method="POST">
