@@ -55,7 +55,7 @@ if(isset($_POST["login"])){
                 </div>
                 <div class="my-2 d-flex justify-content-between align-items-center">
                     <div class="text-center mt-4 font-weight-light">
-                          vous n'avez pas encore de compte? <a href="register.php" class="text-primary">creez un compte</a>
+                          vous n'avez pas encore de compte? <a href="registeer.php" class="text-primary">creez un compte</a>
                     </div>
                 </div>
               </form>

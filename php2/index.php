@@ -65,7 +65,7 @@ img{
         <p>Née le: 1 Avril 2000</p>
         <p>De:...........................</p>
         <p>Et de:...............</p>
-        <p>Originaire de:   '.$row['origine'].' .de nationalité '.$row['national'].'</p>
+        <p>Originaire de:.........de nationalité '.$row['national'].'</p>
         <p>Exerce le proffession de: ' .$row['profession'].'</p>
         <p>Titulaire de :...........</p>
         <p>Réside effecivement dans quartier et est domicilé au lot N°:'.$row['adresse'].'</p>

@@ -12,14 +12,14 @@ if(isset($_POST["register"]))
   $prenom = $_POST["prenom"];
   $numeroCIN = $_POST["numeroCIN"];
   $profession = $_POST["profession"];
-  $origine = $_POST["origine"];
+  
 
     
 
-  if($nom != "" && $national != "" && $email != "" && $adresse != "" && $sexe != "" && $prenom != "" && $numeroCIN != "" && $numeroTEL != "" && $profession != "" && $origine !="" )
+  if($nom != "" && $national != "" && $email != "" && $adresse != "" && $sexe != "" && $prenom != "" && $numeroCIN != "" && $numeroTEL != "" && $profession != "")
     {
 
-      $sql = "INSERT INTO userse(nom,prenom,profession,adresse,numeroCIN,email,numeroTEL,national,sexe,origine) VALUES('$nom','$prenom','$profession','$adresse','$numeroCIN','$email','$numeroTEL','$national','$sexe','$origine')";
+      $sql = "INSERT INTO userse(nom,prenom,profession,adresse,numeroCIN,email,numeroTEL,national,sexe) VALUES('$nom','$prenom','$profession','$adresse','$numeroCIN','$email','$numeroTEL','$national','$sexe',)";
 
   
         include_once('db4.php');
@@ -99,18 +99,7 @@ require_once("header.php");
                                     <option value="bresilien">bresilien</option>
                                 </select>
                              </div>
-                             <div class="form-group mt-3">
-                                <select name="origine" class="form-control form-control-lg" id="origine">
-                                   <option value="">origine</option>
-                                   <option value="tulear">tulear</option>
-                                    <option value="toamasina">toamasina</option>
-                                    <option value="mahajanga">mahajanga</option>
-                                    <option value="tanà">tanà</option>
-                                    <option value="antsiranana">antsiranana</option>
-                                    <option value="fianarantsoa">fianarantsoa</option>
-
-                                </select>
-                             </div>
+                             
                              <div class="mt-3">
                                  <input type="submit" name="register" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="inscription"/>
                              </div>

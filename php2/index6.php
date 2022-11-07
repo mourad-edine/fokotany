@@ -79,10 +79,7 @@ $result = mysqli_query($conn,$sql); ?>
                                     <th>nationalité</th>
                                     <th>'.$row['national'].'</th>
                             </tr>
-                            <tr class="text-dark">
-                                    <th>origine</th>
-                                    <th>'.$row['origine'].'</th>
-                            </tr>
+                            
                             </table>
 
                           </div>
