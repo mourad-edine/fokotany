@@ -18,17 +18,14 @@ if(isset($_POST["register"]))
     
   if($nom != "" && $national != "" && $email != "" && $adresse != "" && $sexe != "" && $prenom != "" && $numeroCIN != "" && $numeroTEL != "" && $profession != "" && $mot !="")
   {
-    include_once('db4.php');
+    include_once('db2.php');
 
     $sql = "INSERT INTO userse(nom, prenom, profession, adresse, numeroCIN, email, numeroTEL, mot_de_passe, sexe, national) VALUES ('$nom','$prenom ','$profession','$adresse','$numeroCIN','$email ','$numeroTEL','$mot','$sexe','$national')";
 
     $qry = mysqli_query($conn,$sql) or die("erreur d'entré!");
     if(!$qry){
-      echo "<h4 class ='text-danger'>erreur</h4>";
-  }else{
-      echo "<h4 class ='text-success'>enregistré avec suucess</h4>";
-  }
-    
+          echo "erreur";
+    }
   }
 
   }
@@ -36,7 +33,6 @@ if(isset($_POST["register"]))
 
 
 <?php
-require_once("header.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -58,8 +54,6 @@ require_once("header.php");
                       <div class="col-lg-7 mx-auto">
                         <div class="auth-form-light text-left py-5 px-4 px-sm-5  rounded ">
                           <form class="pt-1" method="POST" name="register">
-                            <?php 
-                            ?>      
                             <div class="form-group mt-3">
                               <input type="text" name="nom" class="form-control form-control-lg" id="username" placeholder="nom">
                             </div>
@@ -132,8 +126,6 @@ require_once("header.php");
                 </div>
               </div>
         </main>
-      </div>
-        <?php require_once("footer.php") ;?>
 </body>
 </html>        
     

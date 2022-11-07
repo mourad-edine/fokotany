@@ -37,10 +37,6 @@ require_once("header.php");
                                                 <td><?php echo $row['sexe'] ;?></td>
                                                 <td><?php echo $row['adresse'] ;?></td>
                               
-                                            <form action="" method="POST">
-                                                <input type="hidden" name = "id" value="<?php echo $row['id'] ?>">
-                                                <td><input type="submit" href="" class="btn btn-success" name ="delete" value="modifier"></td>
-                                            </form>
                                             
                                             <form action="delete.php" method="POST">
                                                 <input type="hidden" name = "id" value="<?php echo $row['id'] ?>">
