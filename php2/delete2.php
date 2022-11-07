@@ -19,7 +19,7 @@ $db = mysqli_select_db($conn, 'info');
 if(isset($_POST['delete'])){
     $id = $_POST['id'];
 
-    $query = "DELETE FROM users WHERE id ='$id'";
+    $query = "DELETE FROM userse WHERE id ='$id'";
     $query_run = mysqli_query($conn,$query);
 
     if($query_run){
