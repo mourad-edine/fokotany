@@ -87,18 +87,21 @@ $result = mysqli_query($conn,$sql); ?>
                         ';
 
                         }else{
-                          echo '<p class="lead">
-                                    <a class="btn btn-dark" href="index4.php">retour</a>
-                                </p>
-                          <h2 class ="text-primary mt-5 mb-3">la personne a été supprimé!</h2>';
+                          
+                          echo '<h2 class ="text-primary mt-5 mb-3">la personne a été supprimé!</h2>';
                         }
                        
                         ?>
                         <div class="d-flex m-2">
                         
                         <?php
-                         echo '<a class ="btn btn-primary"  href="index.php?data='.$row['id'].'">exporter pdf</a>' ;
                         
+                         if(isset($row))
+                         {
+                          echo '<a class ="btn btn-primary"  href="index.php?data='.$row['id'].'">exporter pdf</a>' ;
+                         }else{
+                          $row = "";
+                         };
                         
                         ?>
                         <form action="delete2.php" method="POST">
