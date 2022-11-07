@@ -11,7 +11,8 @@ require_once("header.php");
                   <div class="">
                     <div class="row w-100 mx-0">
                       <div class="col-lg-12 mx-auto">
-                        <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+                        <div class="auth-form-light text-left px-4 px-sm-5">
+                          <img src="/php2/Capture d’écran 2022-11-06 15426.png" alt="" style="margin-left: 180px;">
                            <?php require_once("db4.php");
                            $query = "SELECT * FROM userse";
                            $query_run = mysqli_query($conn,$query);
@@ -20,7 +21,7 @@ require_once("header.php");
                                  <tr class="text-white" style="background: #0f2027;">
                                     <th>id</th>
                                     <th>nom</th>
-                                    <th>numeroCIN</th>
+                                    <th>email</th>
                                     <th>sexe</th>
                                     <th>adresse</th>
                                     <th>option1</th>
@@ -33,7 +34,7 @@ require_once("header.php");
                                             <tr>
                                                 <td><?php echo $row['id'] ;?></td>
                                                 <td><?php echo $row['nom'] ;?></td>            
-                                                <td><?php echo $row['numeroCIN'] ;?></td>
+                                                <td><?php echo $row['email'] ;?></td>
                                                 <td><?php echo $row['sexe'] ;?></td>
                                                 <td><?php echo $row['adresse'] ;?></td>
                                             

@@ -21,7 +21,7 @@ $result = mysqli_query($conn,$sql); ?>
                   <div class="">
                     <div class="row w-100 mx-0">
                       <div class="col-lg-7 mx-auto">
-                        <div class="auth-form-light text-left py-5 px-4 px-sm-5 bg-secondary rounded">
+                        <div class="auth-form-light text-left py-5 px-4 px-sm-5 bg- srounded">
                         <?php
                         
                         if(isset($_GET['data'])){
@@ -36,7 +36,7 @@ $result = mysqli_query($conn,$sql); ?>
                           $row =mysqli_fetch_assoc($result);
                           echo '<div class="container">
                           <div class="jumbotron">
-                            <h1 class="display-4 text-center text-white">'.$row['nom'].'</h1>
+                            <h1 class="display-4 text-center text-secondary">'.$row['nom'].'</h1>
                             <p class="lead text-center text-dark">vos information:</p>
                             <p class="lead">
                               <a class="btn btn-dark" href="index4.php">retour</a>
@@ -44,39 +44,39 @@ $result = mysqli_query($conn,$sql); ?>
                             <hr>
                             <table class = "table table-bordered">
                             <tr class="text-dark">
-                                    <th>nom</th>
+                                    <th>nom :</th>
                                     <th>'.$row['nom'].'</th>
                             </tr>
                             <tr class="text-dark"></tr>
-                                    <th>prenom</th>
+                                    <th>prenom :</th>
                                     <th>'.$row['prenom'].'</th>
                             </tr>
                             <tr class="text-dark">
-                                    <th>sexe</th>
+                                    <th>sexe :</th>
                                     <th>'.$row['sexe'].'</th>
                             </tr>
                             <tr class="text-dark">
-                                    <th>numeroCIN</th>
+                                    <th>numeroCIN :</th>
                                     <th>'.$row['numeroCIN'].'</th>
                             </tr>
                             <tr class="text-dark">
-                                    <th>profession</th>
+                                    <th>profession :</th>
                                     <th>'.$row['profession'].'</th>
                             </tr>
                             <tr class="text-dark">
-                                    <th>numeroTEL</th>
+                                    <th>numeroTEL :</th>
                                     <th>'.$row['numeroTEL'].'</th>
                             </tr>
                             <tr class="text-dark">
-                                    <th>email</th>
+                                    <th>email :</th>
                                     <th>'.$row['email'].'</th>
                             </tr>
                             <tr class="text-dark">
-                                    <th>adresse</th>
+                                    <th>adresse :</th>
                                     <th>'.$row['adresse'].'</th>
                             </tr>
                             <tr class="text-dark">
-                                    <th>nationalité</th>
+                                    <th>nationalité :</th>
                                     <th>'.$row['national'].'</th>
                             </tr>
                             
@@ -89,22 +89,25 @@ $result = mysqli_query($conn,$sql); ?>
                         }else{
                           
                           echo '<h2 class ="text-primary mt-5 mb-3">la personne a été supprimé!</h2>';
+                          echo'<p class="lead">
+                              <a class="btn btn-dark" href="index4.php">retour</a>
+                            </p>';
                         }
                        
                         ?>
-                        <div class="d-flex m-2">
+                        <div class="d-flex m-2 hol">
                         
                         <?php
                         
                          if(isset($row))
                          {
-                          echo '<a class ="btn btn-primary"  href="index.php?data='.$row['id'].'">exporter pdf</a>' ;
+                          echo '<a class ="btn btn-primary mx-3"  href="index.php?data='.$row['id'].'">exporter pdf</a>' ;
                          }else{
                           $row = "";
                          };
                         
                         ?>
-                        <form action="delete2.php" method="POST">
+                        <form action="delete2.php" method="POST" class="mx-3">
                               <input type="hidden" name = "id" value="<?php echo $row['id'] ?>">
                               <td><input type="submit" href="delete2.php" class="btn btn-danger" name ="delete" value="supprimer"></td>
                         </form>

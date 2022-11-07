@@ -5,7 +5,8 @@ require_once("header.php");
 
 ?>
         <main class="main">
-        <div class="container  pb-5 pt-5 col-9" >
+        <div class="container  pb-5  col-9" >
+          <img src="/php2/Capture d’écran 2022-11-06 15426.png" alt="" style="margin-left: 160px;">
     <div class="row">
         <form class="d-flex" method="post" name="submit">
             <input id="search" name="search" class="form-control me-2" type="text" placeholder="rechercher un nom" aria-label="Search">

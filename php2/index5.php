@@ -56,10 +56,9 @@ require_once("header.php");
                   <div class="">
                     <div class="row w-100 mx-0">
                       <div class="col-lg-7 mx-auto">
-                        <div class="auth-form-light text-left py-5 px-4 px-sm-5  rounded ">
+                        <div class="auth-form-light text-left  px-4 px-sm-5  rounded ">
                           <form class="pt-1" method="POST" name="register">
-                            <?php 
-                            ?>      
+                            <img src="/php2/Capture d’écran 2022-11-06 15426.png" alt="">    
                             <div class="form-group mt-3">
                               <input type="text" name="nom" class="form-control form-control-lg" id="username" placeholder="nom">
                             </div>
@@ -119,8 +118,8 @@ require_once("header.php");
                                 <input type="password" name="mot_de_passe" class="form-control form-control-lg" id="mot_de_passe" placeholder="password">
                              </div>
                              
-                             <div class="mt-3">
-                                 <input type="submit" name="register" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="inscription"/>
+                             <div class="mt-3 mx-5">
+                                 <input type="submit" name="register" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="ajouter"/>
                                  
                              </div>
 

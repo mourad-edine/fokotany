@@ -26,7 +26,7 @@
                 <a href="index4.php" <?php if($nav === 'popu') :?>style ='background: #0f2027; color: white;'<?php endif; ?>>population</a>
     
                 <img src="img/card-checklist.svg" alt="" width="20" height="20">
-                <a href="info.php" <?php if($nav === 'info') :?> style ='background: #0f2027; color: white;'<?php endif; ?>>liste</a>
+                <a href="info.php" <?php if($nav === 'info') :?> style ='background: #0f2027; color: white;'<?php endif; ?>>gerer liste</a>
             
                 <img src="img/plus-circle.svg" alt="" width="20" height="20">
                 <a href="index5.php" <?php if($nav === 'ajout') :?> style ='background: #0f2027; color: white;'<?php endif; ?>>ajouter</a>
